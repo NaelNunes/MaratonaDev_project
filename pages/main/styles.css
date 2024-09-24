@@ -1,45 +1,113 @@
+/* Reset de margin e padding */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    height: 92vh;
-    background-color: white;
-    overflow-x: hidden;
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
 }
 
 header {
-    height: 8vh;
-    /* text-align: center; */
-    background-color: black;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    background-color: #007bff;
     color: white;
-    font-family: "League Spartan", sans-serif;
-}
-
-header div h1 {
-    font-size: 24px;
-}
-
-.titulo2 {
-    color: red;
-}
-
-.titulo1 {
-    margin-left: 20px;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .titulo {
     display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
+.titulo1 {
+    font-size: 3rem;
+    margin: 0;
+}
 
+.titulo2 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
 
-#carrosel
-{
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Adicionei esta linha */
+    align-items: center;    /* Centraliza os elementos no eixo horizontal */
+}
+
+article {
+    margin-bottom: 40px;
+}
+
+#formulario input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+#formulario input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#formulario input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.slideshow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Centraliza o conteúdo do carrossel */
+    max-width: 800px;        /* Largura máxima do carrossel */
+    height: 50vh;
+    position: relative;
+    margin: 20px auto;      /* Centraliza horizontalmente e adiciona margem superior/inferior */
+    box-shadow: 0px 0px 2px;
+    border-radius: 10px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.text {
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+#carrosel {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,8 +116,7 @@ header div h1 {
     width: 100vw;
 }
 
-#carrosel a
-{
+#carrosel a {
     text-decoration: none;
     border: none;
     color: white;
@@ -57,66 +124,53 @@ header div h1 {
 
 .mySlides {
     display: none;
-    width: 40vw;
-
+    width: 100%;
 }
-.mySlides img {vertical-align: middle;
-border-radius: 10px;
-height: 50vh;}
 
-.slideshow-container 
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 40vw;
-    height: 50vh;
-    position: relative;
-    margin: auto;
-    box-shadow: 0px 0px 2px;
+.mySlides img {
+    vertical-align: middle;
     border-radius: 10px;
+    height: 50vh;
+    width: 100%; /* Ajusta a largura da imagem ao carrossel */
 }
 
 .text {
-    background-color: rgba(216, 216, 216, 0.479);
-  color: #777777;
-  font-size: 20px;
-  padding: 20px 0px;
-  border-radius: 0px 0px 10px 10px;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
+    background-color: rgba(0, 0, 0, 0.479);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px 0px;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
 }
 
-.dot
-{
+.dot {
     background-color: rgb(201, 201, 201);
     padding: 1px 10px;
     margin: 5px;
     border-radius: 100%;
 }
 
-.active
-{
+.active {
     background-color: black;
 }
 
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
+}
 
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+@keyframes fade {
+    from { opacity: .4 } 
+    to { opacity: 1 }
+}
 
-
-#formulario
-{
+#formulario {
     height: 30vw;
     padding: 5vh 0;
+    width: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,16 +179,14 @@ height: 50vh;}
     color: black;
 }
 
-#formulario form
-{
+#formulario form {
     margin-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#formulario form input[type="text"]
-{
+#formulario form input[type="text"] {
     background-color: white;
     border: none;
     border-bottom: 2px solid black;
@@ -144,56 +196,29 @@ height: 50vh;}
     font-weight: bold;
 }
 
-#formulario form input[type="text"]::placeholder
-{
+#formulario form input[type="text"]::placeholder {
     color: black;
     font-weight: bold;
 }
 
-#formulario form input[type="text"]:focus
-{
+#formulario form input[type="text"]:focus {
     outline: none;
 }
 
-#formulario form input[type="submit"]
-{
-    width: 80px;
-    padding: 15px 5px;
-    margin-top: 2vh;
-    text-align: center;
-    background-color: black;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+#formulario form input[type="submit"] {
+    width: 150px; /* Aumentando o tamanho para melhorar a usabilidade */
+    padding: 10px 20px;
+    background-color: #333; /* Cor mais neutra e profissional */
     color: white;
-    transition: all 0.4s;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-#formulario form input[type="submit"]:hover
-{
+#formulario form input[type="submit"]:hover {
     scale: 1.1;
 }
 
-
-
-
-
-
-
-
-/* #portifolios
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 30vh;
-    margin-top: 10vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.portifolio-externo-div
-{
+.portifolio-externo-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,8 +226,7 @@ height: 50vh;}
     width: 70vw;
 }
 
-.cards-portifolio
-{
+.cards-portifolio {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,8 +240,7 @@ height: 50vh;}
     transition: all 2s;
 }
 
-.cards-portifolio a
-{
+.cards-portifolio a {
     margin: 0 auto;
     background-color: red;
     color: white;
@@ -225,20 +248,18 @@ height: 50vh;}
     font-weight: bold;
     padding: 15px 0px;
     border-radius: 10px;
-    width: 8vw;;
+    width: 8vw;
     margin-top: 2vh;
     cursor: pointer;
     text-align: center;
     font-size: 14px;
 }
 
-.cards-portifolio a:hover
-{
+.cards-portifolio a:hover {
     text-decoration: underline 2px;
 }
 
-#portifolios img
-{
+#portifolios img {
     width: 120px;
     height: 120px;
     border-radius: 10px;
@@ -248,7 +269,28 @@ height: 50vh;}
     margin-bottom: 2vh;
 }
 
-.cards-portifolio:hover 
-{
+.cards-portifolio:hover {
     scale: 1.1;
-} */
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+article {
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#historia, #objetivo {
+    text-align: justify;
+}
