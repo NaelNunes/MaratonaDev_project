@@ -76,6 +76,7 @@
             <br><br><br>
         </article>
 
+        <!-- Formulário de Inscrição -->
         <article id="formulario">
             <h1>Formulario de Inscrição</h1>
             <form action="">
@@ -86,6 +87,7 @@
             </form>
         </article>
 
+        <!-- História da Maratona -->
         <div id="historia">
             <h1>HISTÓRIA DA MARATONA</h1>
             A Maratona SBC de Programação teve sua primeira edição em 1996, inspirada na ICPC, que já acontecia desde 1970. Desde então, a competição brasileira cresceu significativamente em termos de participantes e visibilidade. Ela se consolidou como uma plataforma importante para revelar talentos em tecnologia e computação no país. Anualmente, diversas universidades organizam seletivas internas para formar suas equipes, que competem nas fases regionais e, posteriormente, na fase nacional. As equipes vencedoras da etapa nacional têm a oportunidade de representar o Brasil na etapa mundial da ICPC, o que oferece reconhecimento global e oportunidades profissionais no campo da ciência da computação.
@@ -105,57 +107,70 @@
             A competição também serve como uma vitrine para talentos em tecnologia no Brasil, conectando estudantes a empresas e instituições de renome. Ela proporciona uma experiência prática que vai além do conteúdo acadêmico tradicional, preparando os futuros profissionais para os desafios do setor.
         </div>
 
-        <article id="portifolios">
-            <h1>Portfólios</h1>
+        <!-- Segundo Carrossel com 7 slides -->
+        <article id="carrosel2">
+            <br><br><br><br><h1>PORTIFÓLIOS</h1> <br><br>
+            
             <div class="slideshow-container">
                 <a href="">
                     <div class="mySlides fade">
-                        <img src="" style="width:100%" alt="Portifolio 1">
-                        <div class="text">Portfólio 1</div>
-                    </div>
-                </a>
-                
-                <a href="">
-                    <div class="mySlides fade">
-                        <img src="" style="width:100%" alt="Portifolio 2">
-                        <div class="text">Portfólio 2</div>
-                    </div>
-                </a>
-                
-                <a href="">
-                    <div class="mySlides fade">
-                        <img src="" style="width:100%" alt="Portifolio 3">
-                        <div class="text">Portfólio 3</div>
-                    </div>
-                </a>
-                
-                <a href="">
-                    <div class="mySlides fade">
-                        <img src="" style="width:100%" alt="Portifolio 4">
-                        <div class="text">Portfólio 4</div>
-                    </div>
-                </a>
-                
-                <a href="">
-                    <div class="mySlides fade">
-                        <img src="" style="width:100%" alt="Portifolio 5">
-                        <div class="text">Portfólio 5</div>
-                    </div>
-                </a>
-                
-                <a href="">
-                    <div class="mySlides fade">
-                        <img src="" style="width:100%" alt="Portifolio 6">
-                        <div class="text">Portfólio 6</div>
+                        <img src="fase inicial.jpg" style="width:100%">
+                        <div class="text">ANDRÉ</div>
                     </div>
                 </a>
 
-                <a href=""></a>
+                <a href="">
                     <div class="mySlides fade">
-                        <img src="" style="width:100%" alt="Portifolio 7">
-                        <div class="text">Portfólio 7</div>
+                        <img src="https://via.placeholder.com/800x400?text=Maratona+2" style="width:100%">
+                        <div class="text">FELLYPE</div>
                     </div>
                 </a>
+            
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="https://via.placeholder.com/800x400?text=Maratona+3" style="width:100%">
+                        <div class="text">LEONARDO</div>
+                    </div>
+                </a>
+            
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="https://via.placeholder.com/800x400?text=Maratona+4" style="width:100%">
+                        <div class="text">MARIA</div>
+                    </div>
+                </a>
+            
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="https://via.placeholder.com/800x400?text=Maratona+5" style="width:100%">
+                        <div class="text">NATHANAEL</div>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="https://via.placeholder.com/800x400?text=Maratona+6" style="width:100%">
+                        <div class="text">VITOR</div>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="https://via.placeholder.com/800x400?text=Maratona+7" style="width:100%">
+                        <div class="text">WILLIAN</div>
+                    </div>
+                </a>
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+              <span class="dot"></span> 
+              <span class="dot"></span>
+              <span class="dot"></span>   
+              <span class="dot"></span>   
             </div>
         </article>
     </main>
@@ -171,15 +186,13 @@
                 slides[i].style.display = "none";  
             }
             slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
+            if (slideIndex > slides.length) {slideIndex = 1}    
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex - 1].style.display = "block";  
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000);
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Muda de slide a cada 2 segundos
         }
     </script>
 </body>
