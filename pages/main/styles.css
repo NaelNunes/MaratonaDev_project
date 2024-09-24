@@ -147,15 +147,19 @@ article {
 }
 
 .dot {
-    background-color: rgb(201, 201, 201);
-    padding: 1px 10px;
-    margin: 5px;
-    border-radius: 100%;
+    height: 15px; /* Altura da bolinha */
+    width: 15px; /* Largura da bolinha */
+    margin: 0 5px; /* Espaçamento entre as bolinhas */
+    background-color: #bbb; /* Cor das bolinhas inativas */
+    border-radius: 50%; /* Forma redonda */
+    display: inline-block; /* Para que fiquem lado a lado */
+    transition: background-color 0.6s ease; /* Transição suave para a cor */
 }
 
-.active {
-    background-color: black;
+.dot.active {
+    background-color: #717171; /* Cor da bolinha ativa */
 }
+
 
 .fade {
     animation-name: fade;
